@@ -1,26 +1,24 @@
 /* ==========================================================================
-   VANILLA STORE VOS - UNIFIED FIXED DESIGN LAYER CHASSIS
+   VANILLA STORE VOS - SPECULAR LAYERED LIQUID PHYSICS ENGINE
    ========================================================================== */
 
-/* 1. Global Box Sizing Reset to eliminate layout margin compression */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* 2. Force full mobile viewport dynamic width and height loops */
 html, body {
     width: 100%;
     min-height: 100dvh;
     background-color: #050507;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: #ffffff;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 }
 
-/* Shifting Ambient Blur Background Matrix */
+/* THE PORTAL ENVIRONMENT: Shifting organic light source deep in the canvas background */
 .ambient-vortex {
     position: absolute;
     width: 100%;
@@ -28,15 +26,11 @@ html, body {
     background: radial-gradient(circle at 50% 50%, rgba(243, 229, 171, 0.12) 0%, rgba(255, 45, 85, 0.03) 50%, transparent 100%);
     filter: blur(60px);
     z-index: 1;
-    animation: vortexLiquidMotion 15s infinite ease-in-out;
+    animation: vortexMotion 15s infinite ease-in-out;
 }
+@keyframes vortexMotion { 0%, 100% { transform: scale(1) translate(0px, 0px); } 50% { transform: scale(1.08) translate(8px, -8px); } }
 
-@keyframes vortexLiquidMotion {
-    0%, 100% { transform: scale(1) translate(0px, 0px); }
-    50% { transform: scale(1.1) translate(10px, -10px); }
-}
-
-/* 3. Base Chassis Architecture - EXPERT PROPORTIONAL CENTERING KEY */
+/* Proportional Centering Chassis core framework */
 .app-chassis {
     display: flex;
     flex-direction: column;
@@ -44,62 +38,65 @@ html, body {
     align-items: center;
     min-height: 100dvh;
     width: 100%;
-    max-width: 480px; /* Locks smartphone scaling constraints on larger displays */
-    margin: 0 auto;   /* FORCES THE ENTIRE CHASSIS CONTAINER TO LOCK DEAD-CENTER */
-    padding: env(safe-area-inset-top, 40px) 24px env(safe-area-inset-bottom, 30px);
+    max-width: 480px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top, 50px) 24px env(safe-area-inset-bottom, 35px);
     text-align: center;
     position: relative;
+    overflow: hidden;
     z-index: 10;
 }
 
-/* Hero Branding Layout Header Frame */
+/* THE LIQUID GLIP OVERLAY SHEEN: Sweeps across the viewport from top corner to bottom on boot */
+.liquid-wave-shutter {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 140%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02), rgba(243,229,171,0.22), #ffffff, rgba(243,229,171,0.22), transparent);
+    z-index: 99;
+    transform: skewX(-22deg);
+    animation: horizontalGlipSweep 1.35s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+@keyframes horizontalGlipSweep { 0% { left: -150%; } 100% { left: 180%; } }
+
+/* Hero Section Layout Base */
 .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: auto;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
 }
 
+/* Vector Image Positioning Node - Controlled Elastic Entry */
 .brand-vector {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1.5rem;
+    width: 66px;
+    height: 66px;
+    margin-bottom: 1.6rem;
     object-fit: contain;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: logoPopIn 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.8s; /* Instantly pops right behind the glip wave sweep trail */
 }
+@keyframes logoPopIn { 0% { opacity: 0; transform: scale(0.7) rotate(-6deg); } 100% { opacity: 1; transform: scale(1) rotate(0deg); } }
 
-.brand-title {
-    font-size: 2.3rem;
-    font-weight: 800;
-    letter-spacing: -1.2px;
-    background: linear-gradient(180deg, #ffffff 0%, #b5b5ba 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 8px;
-}
-
-.system-tagline {
-    font-size: 13px;
-    color: #8e8e93;
-    font-weight: 500;
-    letter-spacing: -0.1px;
-}
-
-/* Identity Gate Action Stack Grid */
+/* Control Button Stack Grid Layout Box */
 .auth-stack {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    max-width: 310px; /* Sleek, crisp thumb bounds */
+    max-width: 305px;
     margin-bottom: auto;
 }
 
-/* Premium Oval Pill Button Custom Geometry */
 .pill-btn {
     width: 100%;
     height: 54px;
-    border-radius: 27px; /* Flawless fluid oval curves */
+    border-radius: 27px; /* Perfect oval pill curves matching Google Flow metrics */
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -107,7 +104,7 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
     box-sizing: border-box;
     border: 1px solid rgba(255,255,255,0.04);
 }
@@ -117,27 +114,4 @@ html, body {
 .oauth-apple { background-color: #111113; color: #ffffff; border-color: rgba(255,255,255,0.1); }
 .oauth-microsoft { background-color: rgba(43, 43, 43, 0.6); color: #ffffff; border-color: rgba(255,255,255,0.1); }
 
-/* App Footer Section - Permanent Baseline Signature Layout Lock */
-.app-footer {
-    width: 100%;
-    padding-top: 20px;
-    flex-shrink: 0;
-    z-index: 20;
-}
-
-.crypto-stamp {
-    font-size: 8px;
-    color: rgba(255, 255, 255, 0.2);
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.founder-signature-line {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.55);
-    font-weight: 500;
-    letter-spacing: -0.1px;
-}
+.app-footer { width: 100%; padding-top: 20px; flex-shrink: 0; z-index: 20; }
