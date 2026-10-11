@@ -1,1 +1,58 @@
+/* ==========================================================================
+   VANILLA STORE VOS - CINEMATIC METALLIC TEXT CASCADE CONFIGURATION
+   ========================================================================== */
+
+.brand-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: -1.3px;
+    background: linear-gradient(180deg, #ffffff 0%, #b5b5ba 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: textIntroCascade 1.1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 1.1s; /* Ripples in smoothly directly after the vector logo pops */
+}
+
+.system-tagline {
+    font-size: 13px;
+    color: #8e8e93;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: textIntroCascade 1.1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 1.3s;
+}
+
+.auth-stack {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: textIntroCascade 1.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 1.6s; /* The final layout segment sliding into precision center layout coordinates */
+}
+
+.crypto-stamp {
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.founder-signature-line {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+    letter-spacing: -0.1px;
+}
+
+@keyframes textIntroCascade {
+    0% { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
 
