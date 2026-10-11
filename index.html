@@ -5,226 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Vanilla Store - VOS Platform Shield</title>
     <style>
-        /* ==========================================================================
-           VANILLA STORE VOS - UNBENDING EDGE-TO-EDGE CENTER ENGINE
-           ========================================================================== */
+        /* FORCE EVERYTHING EDGE-TO-EDGE AND GRAPHICALLY STABLE */
         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            box-sizing: border-box !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
         body, html {
-            background-color: #050507;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: #ffffff;
-            user-select: none;
-            overflow: hidden;
+            background-color: #050507 !important;
+            height: 100vh !important;
+            width: 100vw !important;
+            overflow: hidden !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            color: #ffffff !important;
         }
 
-        /* Shifting Organic Ambient Blur Background Matrix */
+        /* Ambient Background Blur */
         .ambient-vortex {
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            background: radial-gradient(circle at 50% 50%, rgba(243, 229, 171, 0.12) 0%, rgba(255, 45, 85, 0.03) 50%, transparent 100%);
-            filter: blur(60px);
-            z-index: 1;
-            animation: vortexLiquidMotion 15s infinite ease-in-out;
+            position: absolute !important;
+            width: 100% !important;
+            height: 100vh !important;
+            background: radial-gradient(circle at 50% 50%, rgba(243, 229, 171, 0.12) 0%, rgba(255, 45, 85, 0.03) 50%, transparent 100%) !important;
+            filter: blur(60px) !important;
+            z-index: 1 !important;
         }
 
-        @keyframes vortexLiquidMotion {
-            0%, 100% { transform: scale(1) translate(0px, 0px); }
-            50% { transform: scale(1.1) translate(10px, -10px); }
+        /* THE CHASSIS TABLE: FORCES ABSOLUTE HORIZONTAL AND VERTICAL CENTERING NATIVELY */
+        .master-layout-table {
+            width: 100vw !important;
+            height: 100vh !important;
+            border-collapse: collapse !important;
+            position: relative !important;
+            z-index: 10 !important;
+            text-align: center !important;
         }
 
-        /* FULL SCREEN ADAPTIVE INTERFACE CHASSIS */
-        .vanilla-viewport-bezel {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            padding: 40px 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Spreads layout components perfectly from top to bottom */
-            align-items: center;
-            overflow: hidden;
-            z-index: 10;
+        /* Logo Sizing Node */
+        .brand-logo-img {
+            width: 60px !important;
+            height: 60px !important;
+            object-fit: contain !important;
+            margin: 0 auto !important;
         }
 
-        /* THE HIGH-VELOCITY LIQUID REFLECTION INTRO WAVE SHUTTER */
-        .liquid-wave-shutter {
-            position: absolute;
-            top: 0;
-            left: -150%;
-            width: 150%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(243,229,171,0.2), #ffffff, rgba(243,229,171,0.2), transparent);
-            z-index: 99;
-            transform: skewX(-20deg);
-            animation: horizontalWaveSweep 1.4s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+        /* Typography Specification Settings */
+        .brand-title {
+            font-size: 38px !important;
+            font-weight: 800 !important;
+            margin-top: 15px !important;
+            margin-bottom: 8px !important;
+            letter-spacing: -1.5px !important;
+            background: linear-gradient(180deg, #ffffff 0%, #b5b5ba 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            display: inline-block !important;
         }
 
-        @keyframes horizontalWaveSweep {
-            0% { left: -150%; }
-            100% { left: 180%; }
+        .system-tagline {
+            font-size: 14px !important;
+            color: #8e8e93 !important;
+            font-weight: 500 !important;
+            letter-spacing: -0.1px !important;
         }
 
-        /* TOP LAYOUT CORE: Brand Vector Asset Logo Positioning */
-        .brand-logo-frame {
-            width: 60px;
-            height: 60px;
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transform: scale(0.75);
-            animation: logoSpringEntry 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-            animation-delay: 0.8s;
-        }
-
-        .brand-logo-frame img { width: 100%; height: 100%; object-fit: contain; }
-
-        @keyframes logoSpringEntry {
-            0% { opacity: 0; transform: scale(0.75) blur(4px); }
-            100% { opacity: 1; transform: scale(1) blur(0); }
-        }
-
-        /* CENTER LAYOUT CORE: Google Flow Cinematic Cascading Typography */
-        .text-center-matrix {
-            text-align: center;
-            width: 100%;
-            padding: 0 10px;
-            margin: auto 0; /* Forces text block to calculate absolute vertical center bounds */
-        }
-
-        .brand-title-fade {
-            font-size: 38px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            letter-spacing: -1.5px;
-            background: linear-gradient(180deg, #ffffff 0%, #b5b5ba 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;
-            transform: translateY(15px);
-            animation: textCascadeEntry 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            animation-delay: 1.1s;
-        }
-
-        .system-tagline-fade {
-            font-size: 14px;
-            color: #8e8e93;
-            margin: 0;
-            font-weight: 500;
-            letter-spacing: -0.1px;
-            opacity: 0;
-            transform: translateY(12px);
-            animation: textCascadeEntry 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            animation-delay: 1.3s;
-        }
-
-        @keyframes textCascadeEntry {
-            0% { opacity: 0; transform: translateY(15px); filter: blur(5px); }
-            100% { opacity: 1; transform: translateY(0); filter: blur(0); }
-        }
-
-        /* BASE LAYOUT CORE: High-Status Sleek Oval Pill Buttons Stack Grid */
-        .identity-stack-grid { 
-            width: 100%; 
-            max-width: 310px; /* Perfect sleek layout width for all mobile displays */
-            display: flex; 
-            flex-direction: column; 
-            gap: 12px; 
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(10px);
-            animation: textCascadeEntry 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            animation-delay: 1.6s;
+        /* OVAL PILL BUTTON CONFIGURATION */
+        .button-container-block {
+            width: 290px !important;
+            margin: 0 auto !important;
         }
 
         .sso-action-trigger {
-            width: 100%;
-            padding: 16px;
-            border-radius: 30px; /* Perfect fluid oval pill curves */
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-            box-sizing: border-box;
-            border: 1px solid rgba(255,255,255,0.04);
-            text-align: center;
+            width: 100% !important;
+            padding: 16px !important;
+            margin-bottom: 12px !important;
+            border-radius: 30px !important; /* Perfect oval pill geometry */
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            display: block !important;
+            box-sizing: border-box !important;
+            border: 1px solid rgba(255,255,255,0.04) !important;
+            text-align: center !important;
+            text-decoration: none !important;
         }
-        .sso-action-trigger:active { transform: scale(0.96); }
 
-        .oauth-google { background-color: #ffffff; color: #1c1c1e; }
-        .oauth-apple { background-color: #111113; color: #ffffff; border-color: rgba(255,255,255,0.1); }
-        .oauth-microsoft { background-color: rgba(43, 43, 43, 0.6); color: #ffffff; border-color: rgba(255,255,255,0.1); }
+        .oauth-google { background-color: #ffffff !important; color: #1c1c1e !important; }
+        .oauth-apple { background-color: #111113 !important; color: #ffffff !important; border-color: rgba(255,255,255,0.1) !important; }
+        .oauth-microsoft { background-color: rgba(43, 43, 43, 0.6) !important; color: #ffffff !important; border-color: rgba(255,255,255,0.1) !important; }
 
-        /* ABSOLUTE FIXED FOOTER CONTAINER FOR EMMANUEL MABHEURE SIGNATURE */
-        .branding-signature-footer { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            gap: 4px; 
-            width: 100%; 
-            text-align: center; 
-            z-index: 20;
-            margin-top: auto; /* Permanently locks row to the exact baseline of the glass display */
-        }
-        .crypto-stamp { font-size: 9px; color: rgba(255, 255, 255, 0.2); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
-        .founder-signature-line { font-size: 11px; color: rgba(255, 255, 255, 0.55); font-weight: 500; letter-spacing: -0.1px; }
+        /* FIXED BASELINE FOOTER ARCHITECTURE */
+        .crypto-stamp { font-size: 8px !important; color: rgba(255, 255, 255, 0.2) !important; font-weight: 700 !important; letter-spacing: 1.5px !important; text-transform: uppercase; display: block !important; margin-bottom: 4px !important; }
+        .founder-signature-line { font-size: 11px !important; color: rgba(255, 255, 255, 0.55) !important; font-weight: 500 !important; display: block !important; }
     </style>
 </head>
 <body>
 
     <div class="ambient-vortex"></div>
 
-    <!-- THE UNIFIED 100% VIEWPORT CHASSIS -->
-    <div class="vanilla-viewport-bezel">
-        
-        <!-- INTRO WAVE SHUTTER LAYER -->
-        <div class="liquid-wave-shutter"></div>
+    <!-- PURE CENTER MATRIX GRAPHICS TABLE -->
+    <table class="master-layout-table">
+        <!-- TOP SECTION: Logo Vector Space -->
+        <tr style="height: 20%;">
+            <td style="vertical-align: bottom; padding-bottom: 10px;">
+                <img src="src/assets/brand-logo.svg" class="brand-logo-img" alt="🍦">
+            </td>
+        </tr>
 
-        <!-- TOP CORE: Logo Node -->
-        <div class="brand-logo-frame">
-            <img src="src/assets/brand-logo.svg" alt="Vanilla Vector Core">
-        </div>
-        
-        <!-- CENTER CORE: Title and Slogan Space -->
-        <div class="text-center-matrix">
-            <h1 class="brand-title-fade">Vanilla Store</h1>
-            <p class="system-tagline-fade">Identity Verification Protocol</p>
-        </div>
-        
-        <!-- BASE CORE: Pill Navigation Buttons Grid Stack -->
-        
-            <div class="sso-action-trigger oauth-google" onclick="triggerHandshake('Google')">Continue with Google</div>
-            <div class="sso-action-trigger oauth-apple" onclick="triggerHandshake('Apple')">Continue with Apple</div>
-            <div class="sso-action-trigger oauth-microsoft" onclick="triggerHandshake('Microsoft')">Continue with Microsoft</div>
-        </div>
+        <!-- CENTER SECTION: Title and Tagline Space -->
+        <tr style="height: 30%;">
+            <td style="vertical-align: middle;">
+                <h1 class="brand-title">Vanilla Store</h1>
+                <p class="system-tagline">Identity Verification Protocol</p>
+            </td>
+        </tr>
 
-        <!-- THE PERMANENT SIGNATURE BOTTOM FOOTER LINE -->
-        <div class="branding-signature-footer">
-            <span class="crypto-stamp">EMF CRYPTO INTEGRITY GATEWAY</span>
-            <span class="founder-signature-line">Engineered by Emmanuel Mabheure</span>
-        </div>
+        <!-- BASE SECTION: Centered Pill Control Buttons Stack -->
+        <tr style="height: 35%;">
+            <td style="vertical-align: top; padding-top: 15px;">
+                <div class="button-container-block">
+                    <div class="sso-action-trigger oauth-google" onclick="triggerHandshake('Google')">Continue with Google</div>
+                    <div class="sso-action-trigger oauth-apple" onclick="triggerHandshake('Apple')">Continue with Apple</div>
+                    <div class="sso-action-trigger oauth-microsoft" onclick="triggerHandshake('Microsoft')">Continue with Microsoft</div>
+                </div>
+            </td>
+        </tr>
 
-    </div>
+        <!-- FOOTER SECTION: Fixed Baseline Signature Panel -->
+        <tr style="height: 15%;">
+            <td style="vertical-align: bottom; padding-bottom: 35px;">
+                <span class="crypto-stamp">EMF CRYPTO INTEGRITY GATEWAY</span>
+                <span class="founder-signature-line">Engineered by Emmanuel Mabheure</span>
+            </td>
+        </tr>
+    </table>
 
     <script>
         function triggerHandshake(provider) {
-            console.log(`🔑 Redirecting token query pipeline to secure ${provider} API tunnels...`);
+            console.log(`🔑 Redirecting token parameters to secure ${provider} API...`);
             window.location.href = "store.html";
         }
     </script>
