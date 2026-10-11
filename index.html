@@ -4,216 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Vanilla Store - VOS Platform Shield</title>
-    <style>
-        /* ==========================================================================
-           VANILLA STORE VOS - GITHUB PAGES RESISTANT EDGE-TO-EDGE CHASSIS
-           ========================================================================== */
-        * {
-            box-sizing: border-box !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        body, html {
-            background-color: #050507 !important;
-            height: 100% !important;
-            width: 100% !important;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-            color: #ffffff !important;
-            user-select: none !important;
-            overflow: hidden !important;
-        }
-
-        /* Moving Shifting Background Matrix Environment */
-        .ambient-vortex {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            background: radial-gradient(circle at 50% 50%, rgba(243, 229, 171, 0.12) 0%, rgba(255, 45, 85, 0.03) 50%, transparent 100%) !important;
-            filter: blur(60px) !important;
-            z-index: 1 !important;
-            animation: vortexLiquidMotion 15s infinite ease-in-out !important;
-        }
-
-        @keyframes vortexLiquidMotion {
-            0%, 100% { transform: scale(1) translate(0px, 0px); }
-            50% { transform: scale(1.1) translate(10px, -10px); }
-        }
-
-        /* GRID SAFE-ZONE DISPLAY CANVAS: FORCED FULL ACCESSIBILITY RULES */
-        .vanilla-viewport-bezel {
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            width: 100% !important;
-            height: 100% !important;
-            padding: 40px 24px 30px 24px !important;
-            display: grid !important;
-            grid-template-rows: auto 1fr auto auto !important; /* Fixed micro-slots to isolate footer layout weight */
-            justify-items: center !important;
-            align-items: center !important;
-            overflow: hidden !important;
-            z-index: 10 !important;
-        }
-
-        /* TOP-TO-BOTTOM LIQUID GLASS REFLECTION INTRO WAVE SHUTTER */
-        .liquid-wave-shutter {
-            position: absolute !important;
-            top: -150% !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 150% !important;
-            background: linear-gradient(180deg, transparent, rgba(243,229,171,0.2), #ffffff, rgba(243,229,171,0.2), transparent) !important;
-            z-index: 99 !important;
-            animation: verticalWaveSweep 1.4s cubic-bezier(0.76, 0, 0.24, 1) forwards !important;
-        }
-
-        @keyframes verticalWaveSweep {
-            0% { top: -150%; }
-            100% { top: 150%; }
-        }
-
-        /* Top Slot: Vector Identity Icon Core */
-        .brand-logo-frame {
-            width: 60px !important;
-            height: 60px !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            opacity: 0 !important;
-            transform: scale(0.75) !important;
-            animation: logoSpringEntry 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
-            animation-delay: 0.8s !important;
-            grid-row: 1 !important;
-        }
-
-        .brand-logo-frame img { width: 100% !important; height: 100% !important; object-fit: contain !important; }
-
-        @keyframes logoSpringEntry {
-            0% { opacity: 0; transform: scale(0.75) blur(4px); }
-            100% { opacity: 1; transform: scale(1) blur(0); }
-        }
-
-        /* Center Slot: Symmetrical Typography Layout Content Matrix */
-        .text-center-matrix {
-            text-align: center !important;
-            width: 100% !important;
-            padding: 0 10px !important;
-            grid-row: 2 !important;
-        }
-
-        .brand-title-fade {
-            font-size: 38px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            letter-spacing: -1.5px;
-            background: linear-gradient(180deg, #ffffff 0%, #b5b5ba 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;
-            transform: translateY(15px);
-            animation: textCascadeEntry 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-            animation-delay: 1.1s !important;
-        }
-
-        .system-tagline-fade {
-            font-size: 14px;
-            color: #a1a1a6;
-            margin: 0;
-            font-weight: 500;
-            letter-spacing: -0.1px;
-            opacity: 0;
-            transform: translateY(12px);
-            animation: textCascadeEntry 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-            animation-delay: 1.3s !important;
-        }
-
-        @keyframes textCascadeEntry {
-            0% { opacity: 0; transform: translateY(15px); filter: blur(5px); }
-            100% { opacity: 1; transform: translateY(0); filter: blur(0); }
-        }
-
-        /* Lower Center Slot: Single Premium Sign In Control Pill */
-        .identity-stack-grid { 
-            width: 100% !important; 
-            max-width: 280px !important; 
-            display: flex !important; 
-            flex-direction: column !important; 
-            justify-content: center !important;
-            align-items: center !important;
-            grid-row: 3 !important;
-            opacity: 0 !important;
-            transform: translateY(10px) !important;
-            animation: textCascadeEntry 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards !important;
-            animation-delay: 1.6s !important;
-            margin-bottom: 30px !important; /* Assures clean breathing space above signature */
-        }
-
-        .sso-action-trigger {
-            width: 100% !important;
-            padding: 16px !important;
-            border-radius: 30px !important;
-            font-size: 15px !important;
-            font-weight: 600;
-            cursor: pointer !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
-            box-sizing: border-box !important;
-            border: 1px solid rgba(255,255,255,0.04) !important;
-            text-align: center !important;
-            background-color: #ffffff !important;
-            color: #1c1c1e !important;
-            box-shadow: 0 15px 35px rgba(255,255,255,0.05) !important;
-        }
-        .sso-action-trigger:active { transform: scale(0.96) !important; }
-
-        /* Bottom Slot: Isolated Founder Signature Baseline Row */
-        .branding-signature-footer { 
-            width: 100% !important; 
-            text-align: center !important; 
-            grid-row: 4 !important;
-            z-index: 20 !important;
-            align-self: end !important; /* Hard locks container right against device frame view */
-        }
-        
-        .founder-signature-line { 
-            font-size: 14px !important;
-            color: #ffffff !important; 
-            font-weight: 600 !important; 
-            letter-spacing: -0.2px !important;
-            background: linear-gradient(180deg, #ffffff 0%, #c5c5ca 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block !important;
-        }
-    </style>
+    
+    <!-- MASTER DECOUPLED STYLESHEETS (CONNECTED VIA RELATIVE PATHING) -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/typography.css">
+    
+    <!-- YOUR MODULAR ANIMATION DIRECTORY TRACERS -->
+    <link rel="stylesheet" href="./src/assets/background/style.css">
+    <link rel="stylesheet" href="./src/assets/signin/style.css">
 </head>
 <body>
 
-    <div class="ambient-vortex"></div>
+    <!-- INJECTS THE MODULAR MOVING STARS LOGIC LAYER -->
+    <div class="stars-animation-container-slot">
+        <!-- Your background folder's assets execute here -->
+    </div>
 
+    <!-- MAIN GRID CONTAINER CHASSIS -->
     <div class="vanilla-viewport-bezel">
         <div class="liquid-wave-shutter"></div>
 
+        <!-- TOP CORE: Logo Asset -->
         <div class="brand-logo-frame">
-            <img src="src/assets/brand-logo.svg" alt="Vanilla Vector Core">
+            <img src="./src/assets/vanilla.svg" alt="Vanilla Vector Core">
         </div>
         
+        <!-- CENTER CORE: Clean Short Presentation Description -->
         <div class="text-center-matrix">
             <h1 class="brand-title-fade">Vanilla Store</h1>
             <p class="system-tagline-fade">Explore original cartoons and 3D games instantly.</p>
         </div>
         
+        <!-- BASE CORE: Single Premium Sign In Action Pill (Hooks into signin/style.css) -->
         
-            <div class="sso-action-trigger" onclick="triggerHandshake()">Sign In</div>
+            <button class="sso-action-trigger" onclick="triggerHandshake()">Sign In</button>
         </div>
 
+        <!-- PROTECTED BASELINE FOOTER: EMMANUEL MABHEURE TRADEMARK LOCKED IN POSITION -->
         <div class="branding-signature-footer">
             <span class="founder-signature-line">Engineered by Emmanuel Mabheure</span>
         </div>
@@ -221,7 +48,7 @@
 
     <script>
         function triggerHandshake() {
-            console.log("🔑 Routing authentication layer query parameters...");
+            console.log("🔑 Initializing secure single-point authentication gateway routing...");
             window.location.href = "store.html";
         }
     </script>
