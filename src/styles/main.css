@@ -1,0 +1,143 @@
+/* ==========================================================================
+   VANILLA STORE VOS - UNIFIED FIXED DESIGN LAYER CHASSIS
+   ========================================================================== */
+
+/* 1. Global Box Sizing Reset to eliminate layout margin compression */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Force full mobile viewport dynamic width and height loops */
+html, body {
+    width: 100%;
+    min-height: 100dvh;
+    background-color: #050507;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Shifting Ambient Blur Background Matrix */
+.ambient-vortex {
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background: radial-gradient(circle at 50% 50%, rgba(243, 229, 171, 0.12) 0%, rgba(255, 45, 85, 0.03) 50%, transparent 100%);
+    filter: blur(60px);
+    z-index: 1;
+    animation: vortexLiquidMotion 15s infinite ease-in-out;
+}
+
+@keyframes vortexLiquidMotion {
+    0%, 100% { transform: scale(1) translate(0px, 0px); }
+    50% { transform: scale(1.1) translate(10px, -10px); }
+}
+
+/* 3. Base Chassis Architecture - EXPERT PROPORTIONAL CENTERING KEY */
+.app-chassis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 480px; /* Locks smartphone scaling constraints on larger displays */
+    margin: 0 auto;   /* FORCES THE ENTIRE CHASSIS CONTAINER TO LOCK DEAD-CENTER */
+    padding: env(safe-area-inset-top, 40px) 24px env(safe-area-inset-bottom, 30px);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Hero Branding Layout Header Frame */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+}
+
+.brand-vector {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+}
+
+.brand-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    background: linear-gradient(180deg, #ffffff 0%, #b5b5ba 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+.system-tagline {
+    font-size: 13px;
+    color: #8e8e93;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+}
+
+/* Identity Gate Action Stack Grid */
+.auth-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 310px; /* Sleek, crisp thumb bounds */
+    margin-bottom: auto;
+}
+
+/* Premium Oval Pill Button Custom Geometry */
+.pill-btn {
+    width: 100%;
+    height: 54px;
+    border-radius: 27px; /* Flawless fluid oval curves */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+.pill-btn:active { transform: scale(0.96); }
+
+.oauth-google { background-color: #ffffff; color: #1c1c1e; }
+.oauth-apple { background-color: #111113; color: #ffffff; border-color: rgba(255,255,255,0.1); }
+.oauth-microsoft { background-color: rgba(43, 43, 43, 0.6); color: #ffffff; border-color: rgba(255,255,255,0.1); }
+
+/* App Footer Section - Permanent Baseline Signature Layout Lock */
+.app-footer {
+    width: 100%;
+    padding-top: 20px;
+    flex-shrink: 0;
+    z-index: 20;
+}
+
+.crypto-stamp {
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.founder-signature-line {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+    letter-spacing: -0.1px;
+}
