@@ -1,0 +1,110 @@
+/* ==========================================================================
+   VANILLA STORE VOS - EDGE-TO-EDGE SEVERE GRID CHASSIS & ASSET CONNECTOR
+   ========================================================================== */
+
+/* Universal Layout Reset: Erases all browser box defaults by all means */
+* {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force body canvas to lock perfectly into a single unified mobile display window */
+html, body {
+    background-color: #050507 !important;
+    height: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* THE LIQUID ACCESSIBILITY LAYER CHASSIS: HARD CORNER MATRICES */
+.app-chassis {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    
+    /* DYNAMIC VIEWPORT HEIGHT OVERRIDE: Cures all browser navigation tray tray splits */
+    height: 100dvh !important; 
+    max-height: 100dvh !important;
+    
+    /* Ergonomic safe-zone internal padding layout constraints */
+    padding: 55px 24px 35px 24px !important; 
+    
+    display: grid !important;
+    
+    /* EMMANUEL'S DEFENSIVE TRACK DEFICIT FORMULAS: Locks absolute spatial boundaries */
+    grid-template-rows: 
+        minmax(65px, auto)   /* Row Slot 1: Vector Brand Identity Icon Frame Anchor */
+        minmax(180px, 1fr)   /* Row Slot 2: Symmetrical Center Typography Workspace */
+        minmax(55px, auto)   /* Row Slot 3: Single Premium Sign In Active Button Alignment Tray */
+        minmax(40px, auto) !important; /* Row Slot 4: FIXED BASELINE FOUNDER TRADEMARK SEALS */
+        
+    justify-items: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+}
+
+/* ==========================================================================
+   MODULAR ASSET GRID INTEGRATION INTEGRATION PINNINGS
+   ========================================================================== */
+
+/* ASYNC SLOW-MOVING STARS SLOTS BACKGROUND MATRIX INTERSECTION */
+.stars-animation-container-slot {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important; /* Locks background logic behind main typography grids */
+    pointer-events: none !important;
+}
+
+/* STRUCTURAL SLOT 1: Vector Image Positioning Node */
+.brand-logo-frame {
+    grid-row: 1 !important;
+    width: 60px !important;
+    height: 60px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.brand-logo-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    aspect-ratio: 1 / 1 !important; /* Pre-allocates canvas memory blocks before file hydrations */
+}
+
+/* STRUCTURAL SLOT 2: Center Typography Box Grouping Workspace */
+.text-center-matrix {
+    grid-row: 2 !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+}
+
+/* STRUCTURAL SLOT 3: Single Active Button Box Alignment Tray */
+.identity-stack-grid {
+    grid-row: 3 !important;
+    width: 100% !important;
+    max-width: 280px !important; /* Matches Google Flow sleek mobile horizontal scale metrics */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 30px !important; /* Enforces breathing padding zone directly over the footer */
+}
+
+/* STRUCTURAL SLOT 4: FIXED BASELINE FOUNDER TRADEMARK SEALS ROW */
+.app-footer {
+    grid-row: 4 !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 20 !important;
+    align-self: end !important; /* Hard locks container right against device footer glass boundary edge */
+}
